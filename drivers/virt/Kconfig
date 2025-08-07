@@ -41,6 +41,12 @@ config FSL_HV_MANAGER
           4) A kernel interface for receiving callbacks when a managed
 	     partition shuts down.
 
+config IVSHMEM
+    tristate "Inter-VM Shared Memory (IVSHMEM) support"
+    depends on PCI
+    help
+      Driver for Inter-VM Shared Memory device
+
 source "drivers/virt/vboxguest/Kconfig"
 
 source "drivers/virt/nitro_enclaves/Kconfig"
